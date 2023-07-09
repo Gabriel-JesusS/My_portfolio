@@ -3,16 +3,16 @@ import styled from "styled-components"
 function ContainerWave() {
     return (
         <>
-            <Container_wave rel="preload"></Container_wave>
+            <Container_wave ></Container_wave>
         </>
     )
 }
 
 const Container_wave = styled.div`
-position: relative;
+overflow-x:hidden;
 background-image: url("/Home/Wave.png");
 background-size: cover;
-height: 15rem;
+height: 13rem;
 width: 100%;
 
 `

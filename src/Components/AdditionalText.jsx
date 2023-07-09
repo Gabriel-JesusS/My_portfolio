@@ -10,69 +10,62 @@ const { NameFontSize } = FontsSize;
 const { mainFont } = Fonts;
 
 
-function AdditionalText({ }) {
+function AdditionalText({ MyGreetings, WhatIAm, ComplementaryphraseMG, ComplementaryphraseWIA, ApresentationAboutMe, ApresentationAboutMe2, ScrollDow }) {
 
     return (
         <>
-            <div className="ContainerLeft">
-                <Adtional_text style={{ textIndent: "1rem", }}><Red_marking>Ola</Red_marking>! eu sou:</Adtional_text>
-            </div>
-            <MainTitle MyName="Gabriel de Jesus .S" />
-            <Adtional_text style={{ textIndent: "2.5rem" }}>Desenvolvedor <Red_marking>FRONT-END</Red_marking></Adtional_text>
-            <div className="ContainerRight" >
-                <Adtional_text style={{ zIndex: "1", textAlign: "left", animation: "sweep 1s linear " }}>Bem vindo ao meu portifolio,<br /> nele você ira conhecer mais sobre <br /> os meus projetos e  <Red_marking>sobre-mim</Red_marking>.</Adtional_text>
-               
-            </div>
-            <ContainerWave />
-            <Adtional_text style={{marginTop:"1rem", top: "-4rem", marginRight: "1rem", textAlign: "right", animation: "ScrollDow 1s ease-out infinite" }}>Scroll-Dow⇩</Adtional_text>
-
+            <Adtional_text  style={{ textIndent: "1rem" }}><Red_marking>{MyGreetings}</Red_marking>{ComplementaryphraseMG}</Adtional_text ><Adtional_text style={{ textIndent: "2rem", }}>{WhatIAm} <Red_marking>{ComplementaryphraseWIA}</Red_marking></Adtional_text>
+            <Adtional_text style={{ animation: "sweep 0.7s ease-in-out ",  }}>
+                {ApresentationAboutMe}<Red_marking>{ApresentationAboutMe2}</Red_marking>
+            </Adtional_text  >
+            <Adtional_text style={{ top: "11.5rem", marginRight: "1rem", animation: "ScrollDow 1s ease-in infinite" }}>{ScrollDow}</Adtional_text>
 
         </>
     )
 }
 
- const Adtional_text = styled.p`
-transition: top 2s ease-in-out;
+const Adtional_text = styled.p`
+transition: all 1s ease-in-out;
 font-size: 20pt;
 font-weight: bold;
-color: white;
+color: ${WWhite};
 position: relative;
 font-family: 'Lalezar', 'cursive';
 /* animation: sweep 1s ease-in-out; */
 
-@keyframes ScrollDow {
-25%{
-   text-shadow: 5px 2px 1px ${shadowBlue};
-   
-}
-50%{
-   text-shadow: 2px 1px 1px ${shadowBlue};
-   top: -4rem;
-}
-50%{
-   text-shadow: 5px 2px 5px ${shadowBlue};
-   top: -4.5rem;
-}
-}
-@keyframes sweep {
-    0% {
-        opacity: 0;
-        margin-right: 5rem;
-        margin-top: 1rem;
+    @keyframes ScrollDow {
+    25%{
+    text-shadow: 5px 2px 1px ${shadowBlue};
+    
     }
-
-    100% {
-        opacity: 1;
-        margin-top: 0;
-        margin-left: 0px
+    40%{
+    text-shadow: 2px 1px 1px ${shadowBlue};
+    top: 11rem;
     }
-}
-@media screen and (max-width:668px) {
-text-align: left;
-    font-size: 15pt;
+    50%{
+    text-shadow: 5px 2px 5px ${shadowBlue};
+    top: 10.9rem;
+    }
+    }
+    @keyframes sweep {
+        0% {
+            opacity: 0;
+            margin-right: 1.2rem;
+            margin-top: 0.5rem;
+        }
 
- 
-}
+        100% {
+            opacity: 0.5;
+            margin-top: 0;
+            margin-left: 0px
+        }
+    }
+    @media screen and (max-width:668px) {
+    text-align: left;
+        font-size: 15pt;
+
+    
+    }
 
 `
 export default AdditionalText

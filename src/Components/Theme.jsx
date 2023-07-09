@@ -7,13 +7,13 @@ export const Colors = {
 }
 
 export const Fonts = {
-    mainFont: "Lalezar,cursive"
+    mainFont: "Lalezar ,cursive"
 }
 
 export const FontsSize = {
     NameFontSize: "55pt"
 }
 
-export const Red_marking = styled.span`
+export const Red_marking = styled.a`
 color: ${Colors.mars};
 `
