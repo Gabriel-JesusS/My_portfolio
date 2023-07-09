@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import Home from './Components/Home'
-import './App.css'
+import Home from './SectionsOfPage/Home';
+import Projects from './SectionsOfPage/Projects';
+
+import { useRef, useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <div>
-      <Home />
-    </div>
+    < >
+  
+      <Home   />
+
+      <Projects />
+    </>
   )
 }
 

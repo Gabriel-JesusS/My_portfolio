@@ -1,9 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Oswald&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+
+
+* {
+  margin: 0;
+  padding: 0;
+ 
+
 }
 
-body{
-    background-color:#313547 ;
+body {
+  background-color: #313547;
+  overflow-y: scroll;
+
+}
+
+.ContainerLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: relative;
+
+  margin-top: 2rem;
+}
+
+.Scroll {
+  overflow-x: hidden;
+  transition: all 1s ease-in-out;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    border-radius: 10rem;
+    width: 1rem;
+    border: 1px solid #272a3ba4;
+    background-color: #313547;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #FF5449;
+    border-radius: 10rem;
+    width: 1rem;
+  }
+}
+
+.ContainerText {
+  display: flexbox;
+  width: 32rem;
+  text-align: left;
+
+
+  @media screen and (max-width:668px) {
+    margin-top: 3rem;
+    width: 19rem;
+  }
+
+}
+
+
+
+.ContainerRight {
+  display: flex;
+  justify-content: right;
+  justify-items: right;
+
+
+
 }
