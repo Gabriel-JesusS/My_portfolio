@@ -30,7 +30,7 @@ filter: drop-shadow(3px 2px 2px ${Colors.dark} );
 cursor: pointer;
 transition: filter 500ms ease-in-out;
 :hover{
-    filter: drop-shadow(3px 1px 0px ${Colors.mars} );
+    filter: drop-shadow(3px 1px 0px ${Colors.aquaIce} );
 }
 @media screen and (max-width:668px) {
     width: 2rem;

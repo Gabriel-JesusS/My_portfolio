@@ -1,41 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Oswald&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 * {
   margin: 0;
   padding: 0;
- 
+
 
 }
+
+
 
 body {
-  background-color: #313547;
+  overflow-x: hidden;
   overflow-y: scroll;
+  height: 150vh;
+  background: linear-gradient(to right,  rgb(24, 26, 35), rgb(39, 45, 74));
 
 }
 
-.ContainerLeft {
+.MaincontainerLeft {
+  position: fixed;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   justify-content: left;
-  position: relative;
+  justify-items: left;
+  margin-top: 1rem;
 
-  margin-top: 2rem;
+  @media screen and (max-width:1000px) {
+    position: relative;
+  }
+}
+
+.ContainerCenter {
+  display: flex;
+  justify-content: left;
+  margin-top: 1rem;
+
+
+  @media screen and (max-width:1000px) {
+    justify-content: center;
+    justify-items: center;
+  }
+
+}
+
+.ContainerCenterText {
+  text-align: left;
+  width: 35rem;
+margin-left: 0.5rem;
+  @media screen and (max-width:550px) {
+    width: 22rem;
+
+  }
+
+
+
+}
+
+.ContainerScrollYRight {
+  display: flex;
+  justify-content: end;
 }
 
 .Scroll {
+
   overflow-x: hidden;
   transition: all 1s ease-in-out;
   scroll-behavior: smooth;
   ::-webkit-scrollbar {
     border-radius: 10rem;
     width: 1rem;
-    border: 1px solid #272a3ba4;
+    height: 0.5rem;
     background-color: #313547;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #FF5449;
+    background-color: #ff5549f7;
     border-radius: 10rem;
     width: 1rem;
   }
@@ -43,24 +84,45 @@ body {
 
 .ContainerText {
   display: flexbox;
-  width: 32rem;
-  text-align: left;
+  width: 30rem;
+
+  margin-top: 3rem;
+ margin-left: 2rem;
 
 
-  @media screen and (max-width:668px) {
-    margin-top: 3rem;
-    width: 19rem;
+  @media screen and (max-width:1000px) {
+    margin-top: 2rem;
+    width: 20rem;
   }
 
 }
 
+.MainTeste {
+  position: fixed;
+  display: flex;
 
+  justify-content: center;
+  justify-items: center;
+
+  width: 50vw;
+
+  @media screen and (max-width:1000px) {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .ContainerRight {
   display: flex;
+  margin-top: 1rem;
   justify-content: right;
-  justify-items: right;
 
+  @media screen and (max-width: 1000px) {
 
+    justify-content: center;
+
+  }
 
 }

@@ -26,11 +26,4 @@ export const ListProjects = [
         img: "/public/Projects/ListadeProdutosPage.png",
         link: ""
     },
-    {
-        id: "05",
-        name: "poke",
-        description: "Tic Tac Toe é um jogo da velha simples utilizando apenas javascript PURO ",
-        img: "",
-        link: ""
-    }
 ]

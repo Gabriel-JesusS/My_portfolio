@@ -1,17 +1,17 @@
+import AboutMe from './SectionsOfPage/AboutMe';
 import Home from './SectionsOfPage/Home';
 import Projects from './SectionsOfPage/Projects';
+import Skills from './SectionsOfPage/Skills';
 
-import { useRef, useState } from 'react';
+
 
 function App() {
-
-
   return (
-    < >
-  
-      <Home   />
-
-      <Projects />
+    <>
+     <Home />
+        {/* <Projects />
+      <AboutMe/>  */}
+      {/* <Skills/>    */}
     </>
   )
 }

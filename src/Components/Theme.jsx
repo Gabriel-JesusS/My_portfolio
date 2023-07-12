@@ -1,19 +1,25 @@
 import styled from "styled-components"
 export const Colors = {
-    mars: "#FF5449",
+    aquaIce: "#0ECDF7",
     shadowBlue: "#313547",
     dark: "#252525",
     WWhite: "#FFF"
 }
 
-export const Fonts = {
-    mainFont: "Lalezar ,cursive"
+export const fontsImport = {
+    mainFont: "Lalezar ,cursive",
+    textFont: "Raleway, sans-serif"
+
 }
 
-export const FontsSize = {
-    NameFontSize: "55pt"
+export const fontSize = {
+    TitleFontMain: "50pt",
+    TitleFontSecondary: "30pt",
+    TextFontMain: "14pt"
 }
-
+export const fontSizeResponsive = {
+    TitleFontMain: "25pt"
+}
 export const Red_marking = styled.a`
-color: ${Colors.mars};
+color: ${Colors.aquaIce};
 `

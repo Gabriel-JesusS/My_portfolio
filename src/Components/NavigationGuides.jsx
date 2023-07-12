@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import { Colors, FontsSize } from "./Theme";
-import { Fonts } from "./Theme";
+import { Colors, fontSize } from "./Theme";
+import { fontsImport } from "./Theme";
 import { Link } from "react-scroll"
-const { WWhite, dark, shadowBlue, mars } = Colors;
-const { NameFontSize } = FontsSize;
-const { mainFont } = Fonts;
+const { WWhite, dark, shadowBlue, aquaIce: mars } = Colors;
+const { TitleFontMain: NameFontSize } = fontSize;
+const { mainFont } = fontsImport;
 
 function NavigationGuides({ GuidesHome, GuidesProjects, GuidesAboutMe, GuidesSkills }) {
 
@@ -15,19 +15,15 @@ function NavigationGuides({ GuidesHome, GuidesProjects, GuidesAboutMe, GuidesSki
         <>
 
             <Navigation_guides >
-                <Guides_for_section >
-                    <Link to="/" spy={true} smooth={true} duration={500}>
-                        {GuidesHome}
-                    </Link>
-                </Guides_for_section >
-                <Guides_for_section >
-                    <Link to="Projects" spy={true} smooth={true} duration={500}>
-                        {GuidesProjects}
-                    </Link>
-                </Guides_for_section>
                 <Guides_for_section>
                     <Link to="AboutMe" spy={true} smooth={true} duration={500}>
                         {GuidesAboutMe}
+                    </Link>
+                </Guides_for_section>
+            
+                <Guides_for_section >
+                    <Link to="Projects" spy={true} smooth={true} duration={500}>
+                        {GuidesProjects}
                     </Link>
                 </Guides_for_section>
                 <Guides_for_section>
@@ -58,7 +54,7 @@ z-index: 1;
     background-color: ${WWhite};
     color: ${mars};
 }
-@media screen and (max-width:668px) {
+@media screen and (max-width:768px) {
     height: 1.5rem;
 justify-content: right;
 
@@ -81,7 +77,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular';
 cursor: pointer;
 
 @media screen and (max-width:668px) {
-    font-size: 10pt;
+    font-size: 12pt;
 margin-right: 1rem;
 
 }
