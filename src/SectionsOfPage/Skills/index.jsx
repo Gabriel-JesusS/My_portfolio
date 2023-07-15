@@ -4,7 +4,7 @@ function Skills() {
     return (
         <>
         <main>
-            <div style={{ marginTop: "2rem" }} >
+            <div style={{ marginTop: "2rem" }} id="Skills" >
                 <MainTitle SkillsTitle="Habilidades" />
             </div>
         </main>

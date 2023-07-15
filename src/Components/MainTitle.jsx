@@ -5,7 +5,7 @@ import { Colors, fontSizeResponsive, fontsImport,fontSize } from "./Theme";
 function MainTitle({ HomeTitle, TitleProjects, AboutMeTitle, SkillsTitle }) {
     return (
         <>
-            <Main_title style={{ textShadow: "1px 2px 2px #625656" }}  >{HomeTitle}</Main_title>
+            <Main_title   >{HomeTitle}</Main_title>
             <Main_title style={{ fontSize: fontSize.TitleFontSecondary }}>{TitleProjects}</Main_title>
             <Main_title style={{ fontSize: fontSize.TitleFontSecondary }}>{AboutMeTitle}</Main_title>
             <Main_title style={{ fontSize: fontSize.TitleFontSecondary }}>{SkillsTitle}</Main_title>
@@ -18,7 +18,6 @@ color: ${Colors.WWhite};
 font-size: ${fontSize.TitleFontMain};
 font-family: 'Lalezar', 'cursive';
 text-indent: 1rem;
-
 @media screen and (max-width:768px) {
     font-size: ${fontSizeResponsive.TitleFontMain};
 }

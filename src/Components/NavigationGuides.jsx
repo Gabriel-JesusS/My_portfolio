@@ -41,21 +41,23 @@ display: flex;
 justify-content: right;
 align-items: end;
 text-align: center;
-background-color: ${mars};
+margin-bottom: 1rem;
+background-color: ${Colors.aquaIce};
 top: 0;
 width: 100%;
 position: fixed;
+transition: background 250ms linear;
 height: 2rem;
 list-style: none;
-
 z-index: 1;
+
 :hover,:focus{
 
-    background-color: ${WWhite};
-    color: ${mars};
+color: ${Colors.WWhite};
+
 }
 @media screen and (max-width:768px) {
-    height: 1.5rem;
+height: 1.5rem;
 justify-content: right;
 
 
@@ -64,20 +66,23 @@ justify-content: right;
 `
 const Guides_for_section = styled.button`
 appearance: none;
-background-color: transparent;
-transition: background 0.2s linear;
-font-size: 17pt;
-font-weight: bold;
-margin-right: 2rem;
-padding-top: 1.5rem;
 border: none;
-color: ${shadowBlue};
-font-family: 'Lucida Sans', 'Lucida Sans Regular';
+background-color: transparent;
+transition: background 250ms linear;
+background: rgba(212, 206, 206, 0.08);
 
+
+font-size: 15pt;
+font-weight: bold;
+margin-right: 1rem;
+padding-top: 1.5rem;
+
+color: ${shadowBlue};
+font-family: ${fontsImport.mainFont};
 cursor: pointer;
 
-@media screen and (max-width:668px) {
-    font-size: 12pt;
+@media screen and (max-width:1000px) {
+font-size: 12pt;
 margin-right: 1rem;
 
 }
