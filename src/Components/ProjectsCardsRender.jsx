@@ -2,26 +2,24 @@ import styled from "styled-components"
 import { ListProjects } from "./ListProjects";
 import { Colors, fontSize } from "./Theme";
 import { fontsImport } from "./Theme";
-import { Link } from "react-scroll";
 
-
-
-
+//ESSE COMPONENTE É RESPONSAVEL POR RENDERIZAR O OBJETO (ListProjects) EM FORMA DE CARD
 function ProjectsCardsRender() {
 
-
-    const RenderCardProjects = ListProjects.map((valueList, D, ARR) => {
+    const RenderCardProjects = ListProjects.map((valueList) => {
         return <Card_projects key={valueList.id} >
             <Title_card_projects >
                 {valueList.name}
             </Title_card_projects>
             <MainContainer>
-                <Img_card_projects src={valueList.img} title={valueList.name} />
+                <Container_img_button>
+                    <Img_card_projects src={valueList.img} title={valueList.name} />
+                    <a href={valueList.link} target="_blank"> Clique aqui <span>»</span> </a>
+                </Container_img_button>
                 <DescriptionText>
                     {valueList.description}
                 </DescriptionText>
             </MainContainer>
-            <a href={valueList.link} target="_blank"> Clique aqui <span>»</span> </a>
         </Card_projects>
     }, 1000);
 
@@ -34,12 +32,16 @@ function ProjectsCardsRender() {
     )
 }
 
-
-
+//ESTILIZAÇÃO DOS COMPONENTES
+const Container_img_button = styled.div`
+display: flex;
+flex-direction: column;
+`
 const DescriptionText = styled.p`
 text-align: left;
 color: ${Colors.WWhite};
 margin: 0.5rem;
+display: block;
 font-family: ${fontsImport.textFont};
 @media screen and (max-width: 1000px) {
  font-size: 9pt;
@@ -47,12 +49,9 @@ font-family: ${fontsImport.textFont};
 
 }
 `
-
 const MainContainer = styled.div`
 display: flex;
 justify-content: start;
-
-
 `
 const Container_cardsP = styled.div`
 display: flex;
@@ -65,22 +64,24 @@ margin-right: 1rem;
 const Card_projects = styled.div`
 display: grid;
 margin-bottom: 1rem;
-box-shadow: 1px -3px 10px #000;
+box-shadow: 2px 2px 6px #000;
 width: 100%;
+
 a{
-    transition: all 250ms ease-in-out;
-    text-align: center;
-    border: 0.3rem double transparent;
-    display: block;
-    width: 12.5rem;
-    color: ${Colors.WWhite};
-    outline: none;
-    background-color: ${Colors.aquaIce};
-    font-family: ${fontsImport.mainFont};
-    text-decoration: none ;
+transition: all 250ms ease-in-out;
+text-align: center;
+align-items: center;
+border: 0.5rem double transparent;
+font-size: 10pt;
+color: ${Colors.WWhite};
+outline: none;
+background-color: ${Colors.aquaIce};
+font-family: ${fontsImport.mainFont};
+text-decoration: none ;
+
 span{
-    transition: all 250ms linear;
-    opacity: 0;
+transition: all 250ms linear;
+opacity: 0;
 }
 }
 
@@ -89,16 +90,14 @@ a:hover{
     span{
         opacity: 1;
     }
-    border: 0.3rem double ${Colors.aquaIceCards};
-    background-color: ${Colors.textAquaIce};
-    color: ${Colors.shadowBlue};
-
+    border: 0.5rem double ${Colors.aquaIce};
+    background: linear-gradient(to right, rgb(24, 26, 35), rgb(39, 45, 74));
 }
 
-@media screen and (max-width: 1000px) {
-  
+@media screen and (max-width: 768px) {
     a{
-       width: 9.4rem;
+
+        height: 0.9rem;
     }
 }
 
@@ -106,7 +105,7 @@ a:hover{
 const Title_card_projects = styled.p`
 font-family: ${fontsImport.textFont};
 color: ${Colors.WWhite};
-background-color: ${Colors.textAquaIce};
+background-color: ${Colors.aquaIce};
 text-align: start;
 height: 1.1rem;
 text-indent: 1rem;
@@ -114,17 +113,14 @@ font-weight: bold;
 `
 const Img_card_projects = styled.img`
 background-color: ${Colors.dark};
-height: 10.8rem;
+height: 10rem;
 width: 13rem;
-@media screen and (max-width:1000px) {
-height:9rem;
+@media screen and (max-width:768px) {
+height:7rem;
 width: 10rem;
 }
 
-@media screen and (max-height: 450px) {
-    width: 10rem;
-    height: 8.9rem;
-}
+
 `
 
 export default ProjectsCardsRender

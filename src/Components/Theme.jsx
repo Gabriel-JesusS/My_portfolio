@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+
 export const Colors = {
     aquaIce: "#0ECDF7",
     aquaIceCards: "#228ea6",
@@ -15,15 +16,23 @@ export const fontsImport = {
 }
 
 export const fontSize = {
-    TitleFontMain: "45pt",
+    titleFontMain: "45pt",
     TitleFontSecondary: "30pt",
     TextFontMain: "14pt"
 }
 
 export const fontSizeResponsive = {
-    TitleFontMain: "25pt"
+    titleFontMain: "25pt"
 }
 
 export const Red_marking = styled.a`
 color: ${Colors.aquaIce};
 `
+export const Line_ = styled.hr`
+background-color: red;
+`
+
+export const ScreenSize ={
+    mainScreenWidth: "49vw",
+    cardSkills: "60%"
+}

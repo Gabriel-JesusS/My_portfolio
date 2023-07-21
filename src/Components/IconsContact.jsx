@@ -1,6 +1,7 @@
-import styled from "styled-components"
-import { Colors } from "./Theme"
-function Icons({ github, linkedin }) {
+import styled from "styled-components";
+import { Colors } from "./Theme";
+
+function IconsContact({ github, linkedin }) {
     return (
         <>
             <Container_Icons>
@@ -20,7 +21,7 @@ function Icons({ github, linkedin }) {
     )
 }
 
-
+//ESTILIZAÇÃO DOS COMPONENTES
 const Icons_P = styled.a`
 height:3rem;
 width:3rem;
@@ -32,6 +33,7 @@ transition: filter 500ms ease-in-out;
 :hover{
     filter: drop-shadow(3px 1px 0px ${Colors.aquaIce} );
 }
+
 @media screen and (max-width:668px) {
     width: 2rem;
     height: 2rem;
@@ -41,6 +43,7 @@ transition: filter 500ms ease-in-out;
 const Container_Icons = styled.div`
 display: flex;
 flex-direction: row;
+
 `
 
-export default Icons
+export default IconsContact;

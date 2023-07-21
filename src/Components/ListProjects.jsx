@@ -2,7 +2,7 @@ export const ListProjects = [
     {
         id: "01",
         name: "Tic Tac Toe",
-        description: "Tic Tac Toe é um jogo da velha simples, feito com JS, HTML, CSS onde você pode jogar localmente com um amigo.  ",
+        description: "Tic Tac Toe é um jogo da velha simples, desenvolvido com JS, HTML e CSS onde você pode jogar localmente com um amigo.  ",
         img: "/public/Projects/TicTacToePage.png",
         link: "https://gabriel-jesuss.github.io/Tic-Tac-Toe/",
      
@@ -18,19 +18,11 @@ export const ListProjects = [
     },
     {
         id: "03",
-        name: "ElegantWatch",
-        description: "ElegantWatch é nada menos que um cronômetro estiloso, feito com JS, HTML, CSS.",
+        name: "Elegant StopWatch",
+        description:  "Elegant StopWacth é um cronômetro feito com HTML, JS e css, com o intuito de poder cronometrar seu tempo da melhor forma possível.",
         img: "/public/Projects/StopWatchPage.png",
-        link: "",
+        link: "https://gjsouls.github.io/StopWatch/",
      
         
-    },
-    {
-        id: "04",
-        name: "Lista de Produtos",
-        description: "Tic Tac Toe é um jogo da velha simples utilizando apenas javascript PURO ",
-        img: "/public/Projects/ListadeProdutosPage.png",
-        link: "",
-     
     },
 ]

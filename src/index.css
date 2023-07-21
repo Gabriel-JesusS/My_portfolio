@@ -12,14 +12,12 @@ body {
   background: linear-gradient(to right, rgb(24, 26, 35), rgb(39, 45, 74));
 }
 
-body::-webkit-scrollbar{
-  background:#ffffff;
- 
-
+body::-webkit-scrollbar {
+  background: #ffffff;
 }
 
-body::-webkit-scrollbar-thumb{
-  background-color: rgb(65, 66, 66); 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 66, 66);
 }
 
 .containerLeftFixedHome {
@@ -30,16 +28,35 @@ body::-webkit-scrollbar-thumb{
   justify-content: left;
   justify-items: left;
   margin-top: 1rem;
+
+ 
+  transition: all 500ms ease-in-out;
+  animation: sweep 1s ease-out;
   @media screen and (max-width:1000px) {
     position: relative;
   }
+  
 }
 
+@keyframes sweep {
+  0% {
+       opacity: 0;
+      margin-left: 1rem;
+margin-bottom: 1rem;
+  }
+
+  100% {
+      opacity: 0.5;
+      margin-left: 0px;
+      margin-bottom: 0rem;
+  }
+}  
 /** "NOME DA DESSA CLASSE SE REFERE A DISPOSITIVOS MOBILES"**/
 .ContainerCenter {
   display: flex;
   justify-content: left;
   margin-top: 1rem;
+
   @media screen and (max-width:1000px) {
     justify-content: center;
     justify-items: center;
@@ -48,11 +65,22 @@ body::-webkit-scrollbar-thumb{
 }
 
 
+.ContainerCenterS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+margin-bottom: 3rem;
+}
 
 .ContainerText {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: left;
-  width: 35rem;
+  width: 32rem;
   margin-left: 1rem;
+margin-bottom: 6rem;
   @media screen and (max-width:550px) {
     width: 22rem;
     margin-left: 0;
@@ -66,6 +94,7 @@ body::-webkit-scrollbar-thumb{
   width: 30rem;
   margin-top: 3rem;
   margin-left: 2rem;
+
   @media screen and (max-width:1000px) {
     margin-top: 2rem;
     width: 20rem;
@@ -82,10 +111,11 @@ body::-webkit-scrollbar-thumb{
   width: 49vw;
   height: 100%;
   box-shadow: 1px -1px 5px #000;
+
   @media screen and (max-width:1000px) {
     position: relative;
     flex-direction: column;
-margin-bottom: 5rem;
+    margin-bottom: 5rem;
     width: 100%;
     height: 100%;
     box-shadow: none;
@@ -93,15 +123,29 @@ margin-bottom: 5rem;
   }
 }
 
+.ContainerTextRight {
+  width: 100%;
+  text-align: end;
+  margin-right: 2rem;
+}
+
+.ContainerTitleSkill {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.containerLeft {
+  display: flex;
+  justify-content: left;
+  align-items: start;
+}
+
 .ContainerRight {
   display: flex;
-  margin-top: 1rem;
   justify-content: right;
 
   @media screen and (max-width: 1000px) {
-
     justify-content: center;
-
   }
 
 }
