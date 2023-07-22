@@ -16,7 +16,7 @@ position: fixed;
 bottom: 0;
 margin: 0;
 left: 0;
-background-image: url("/Home/wave.svg");
+background-image: url("public/Icons/wave.svg");
 background-size: cover;
 height: 9rem;
 width: ${ScreenSize.mainScreenWidth};
