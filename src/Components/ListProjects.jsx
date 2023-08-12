@@ -21,7 +21,7 @@ export const ListProjects = [
         name: "Elegant StopWatch",
         description:  "Elegant StopWacth é um cronômetro feito com HTML, JS e css, com o intuito de poder cronometrar seu tempo da melhor forma possível.",
         img: "https://i.ibb.co/Br1YYR0/Stop-Watch-Page.png",
-        link: "https://gjsouls.github.io/StopWatch/",
+        link: "https://gabriel-jesuss.github.io/ElegantStopWatch/",
      
         
     },
