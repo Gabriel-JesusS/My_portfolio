@@ -8,7 +8,7 @@ function AdditionalText({ MyGreetings, WhatIAm, ComplementaryphraseMG, Complemen
     return (
         <>
             <Adtional_text style={{ textIndent: "1rem" }}><Red_marking>{MyGreetings}</Red_marking>{ComplementaryphraseMG}</Adtional_text ><Adtional_text style={{ textIndent: "2rem", }}>{WhatIAm} <Red_marking>{ComplementaryphraseWIA}</Red_marking></Adtional_text>
-            <Adtional_text style={{ position: "relative", transition: "all 250ms ease-in-out" }}>
+            <Adtional_text style={{animation: "sweep 0.5s ease-out",  position: "relative", transition: "top 250ms ease-in-out" }}>
                 {ApresentationAboutMe}<Red_marking>{ApresentationAboutMe2}</Red_marking>
             </Adtional_text  >
             <Adtional_text style={{ fontSize: fontSize.TextFontMain, fontFamily: fontsImport.textFont }} >{AboutMe}</Adtional_text>

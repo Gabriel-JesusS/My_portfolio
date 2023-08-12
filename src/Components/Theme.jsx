@@ -18,7 +18,7 @@ export const fontsImport = {
 export const fontSize = {
     titleFontMain: "45pt",
     TitleFontSecondary: "30pt",
-    TextFontMain: "14pt"
+    TextFontMain: "15pt"
 }
 
 export const fontSizeResponsive = {

@@ -53,6 +53,8 @@ color: ${Colors.WWhite};
 
 @media screen and (max-width:768px) {
 height: 1.5rem;
+justify-content: center;
+margin: 0;
 }
 
 `

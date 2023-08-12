@@ -4,6 +4,7 @@ import Skills from "../SectionsOfPage/Skills"
 import Projects from "../SectionsOfPage/Projects"
 import AdditionalText from "./AdditionalText"
 import { ScreenSize } from "./Theme"
+import Wave from "./Wave"
 
 //ESSE COMPONENTE É RESPONSAVEL PELO SCROLL VERTICAL QUANDO A TELA FOR MAIOR QUE 1000px
 function ContainerY() {
@@ -14,6 +15,7 @@ function ContainerY() {
                 <Projects />
                 <Skills />
             </Container_y>
+           
         </>
     )
 }
@@ -23,7 +25,7 @@ export const Container_y = styled.main`
 display: flex;
 justify-content: left;
 margin-top: 2rem;
-overflow-x:hidden ;
+
 flex-direction: column;
 width: ${ScreenSize.mainScreenWidth} ;
 overflow-y: hidden;

@@ -11,7 +11,7 @@ function Home() {
             <NavigationGuides GuidesProjects="Projetos" GuidesHome="Inicio" GuidesAboutMe="Sobre-mim" GuidesSkills="Habilidades" />
             <div className="ContainerFixed" >
                 <div className="containerLeftFixedHome">
-                    <div style={{ marginTop: "1rem" }}>
+                    <div style={{ marginTop: "2rem" }}>
                         <AdditionalText MyGreetings="Olá" ComplementaryphraseMG="! eu sou:" />
                         <MainTitle HomeTitle="Gabriel de Jesus .S" />
                         <AdditionalText WhatIAm="Desenvolvedor" ComplementaryphraseWIA="FRONT-END" />

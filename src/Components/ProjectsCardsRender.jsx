@@ -66,7 +66,6 @@ display: grid;
 margin-bottom: 1rem;
 box-shadow: 2px 2px 6px #000;
 width: 100%;
-
 a{
 transition: all 250ms ease-in-out;
 text-align: center;
@@ -96,8 +95,7 @@ a:hover{
 
 @media screen and (max-width: 768px) {
     a{
-
-        height: 0.9rem;
+        height: 1.1rem;
     }
 }
 
