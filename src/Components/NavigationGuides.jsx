@@ -1,33 +1,27 @@
 import styled from "styled-components"
-import { Colors, FontsSize } from "./Theme";
-import { Fonts } from "./Theme";
+import { Colors, fontSize } from "./Theme";
+import { fontsImport } from "./Theme";
 import { Link } from "react-scroll"
-const { WWhite, dark, shadowBlue, mars } = Colors;
-const { NameFontSize } = FontsSize;
-const { mainFont } = Fonts;
+const { WWhite, dark, shadowBlue, aquaIce: mars } = Colors;
+const { titleFontMain: NameFontSize } = fontSize;
+const { mainFont } = fontsImport;
 
-function NavigationGuides({ GuidesHome, GuidesProjects, GuidesAboutMe, GuidesSkills }) {
+function NavigationGuides({ GuidesProjects, GuidesAboutMe, GuidesSkills }) {
 
 
 
 
     return (
         <>
-
             <Navigation_guides >
-                <Guides_for_section >
-                    <Link to="/" spy={true} smooth={true} duration={500}>
-                        {GuidesHome}
-                    </Link>
-                </Guides_for_section >
-                <Guides_for_section >
-                    <Link to="Projects" spy={true} smooth={true} duration={500}>
-                        {GuidesProjects}
-                    </Link>
-                </Guides_for_section>
                 <Guides_for_section>
                     <Link to="AboutMe" spy={true} smooth={true} duration={500}>
                         {GuidesAboutMe}
+                    </Link>
+                </Guides_for_section>
+                <Guides_for_section >
+                    <Link to="Projects" spy={true} smooth={true} duration={500}>
+                        {GuidesProjects}
                     </Link>
                 </Guides_for_section>
                 <Guides_for_section>
@@ -40,50 +34,45 @@ function NavigationGuides({ GuidesHome, GuidesProjects, GuidesAboutMe, GuidesSki
     )
 }
 
+//ESTILIZAÇÃO DOS COMPONENTES
 const Navigation_guides = styled.nav`
 display: flex;
 justify-content: right;
-align-items: end;
-text-align: center;
-background-color: ${mars};
+margin-bottom: 1rem;
+background-color: ${Colors.aquaIce};
 top: 0;
+height: 2rem;
 width: 100%;
 position: fixed;
-height: 2rem;
+transition: background 250ms linear;
 list-style: none;
-
 z-index: 1;
 :hover,:focus{
-
-    background-color: ${WWhite};
-    color: ${mars};
+color: ${Colors.WWhite};
 }
-@media screen and (max-width:668px) {
-    height: 1.5rem;
-justify-content: right;
 
-
+@media screen and (max-width:768px) {
+height: 1.5rem;
+justify-content: center;
+margin: 0;
 }
 
 `
 const Guides_for_section = styled.button`
-appearance: none;
 background-color: transparent;
-transition: background 0.2s linear;
-font-size: 17pt;
+transition: background 250ms linear;
+border: none;
+font-size: 15pt;
 font-weight: bold;
 margin-right: 2rem;
-padding-top: 1.5rem;
-border: none;
 color: ${shadowBlue};
-font-family: 'Lucida Sans', 'Lucida Sans Regular';
-
+font-family: ${fontsImport.mainFont};
 cursor: pointer;
 
-@media screen and (max-width:668px) {
-    font-size: 10pt;
+@media screen and (max-width:1000px) {
+font-size: 12pt;
 margin-right: 1rem;
 
 }
 `
-export default NavigationGuides
+export default NavigationGuides;

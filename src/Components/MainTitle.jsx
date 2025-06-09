@@ -1,28 +1,29 @@
 import styled from "styled-components"
-import { Colors, FontsSize } from "./Theme";
-import { Fonts } from "./Theme";
+import { Colors, fontSizeResponsive, fontsImport,fontSize } from "./Theme";
 
-const { WWhite, dark, shadowBlue, mars } = Colors;
-const { NameFontSize } = FontsSize;
-const { mainFont } = Fonts;
 
-function MainTitle({ HomeTitle, TitleProjects }) {
+function MainTitle({ HomeTitle, TitleProjects, AboutMeTitle, SkillsTitle,technologies, Skills }) {
     return (
         <>
-            <Main_title  style={{ textShadow: "1px -2px 2px #252525" }}  >{HomeTitle}</Main_title>
-            <Main_title >{TitleProjects}</Main_title>
+            <Main_title >{HomeTitle}</Main_title>
+            <Main_title style={{ fontSize: fontSize.TitleFontSecondary }}>{TitleProjects}</Main_title>
+            <Main_title style={{ fontSize: fontSize.TitleFontSecondary }}>{AboutMeTitle}</Main_title>
+            <Main_title style={{ fontSize: fontSize.TitleFontSecondary }}>{SkillsTitle}</Main_title>
+            <Main_title style={{fontSize: "15pt"}}>{technologies}</Main_title>
+            <Main_title style={{fontSize: "15pt" }}>{Skills}</Main_title>
         </>
     )
 }
 
+//ESTILIZAÇÃO DOS COMPONENTES
 const Main_title = styled.h1`
-color: ${WWhite};
-font-size: ${NameFontSize};
+color: ${Colors.WWhite};
+font-size: ${fontSize.titleFontMain};
 font-family: 'Lalezar', 'cursive';
 text-indent: 1rem;
-@media screen and (max-width:668px) {
-    font-size: 30pt;
+@media screen and (max-width:768px) {
+    font-size: ${fontSizeResponsive.titleFontMain};
 }
-`
 
-export default MainTitle
+`
+export default MainTitle;
